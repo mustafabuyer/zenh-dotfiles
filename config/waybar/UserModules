@@ -1,0 +1,23 @@
+//* ---- 💫 https://github.com/JaKooLit 💫 ---- *//
+/* Waybar Modules Extras */
+
+/* This is where you can add Extra Modules you wish. copy.sh will try to restore*/
+/* this file along with the unique configs and styles. */
+/* IMPORTANT, be mindful with , or ". else waybar will not start */
+
+{
+
+"custom/playerctl2": {
+        "format": "<span>▶︎  </span>",
+        "return-type": "json",
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}}  {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "on-click-middle": "playerctl previous",
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl next",
+        "scroll-step": 5.0,
+        "on-scroll-up": "$HOME/.config/hypr/scripts/Volume.sh --inc",
+        "on-scroll-down": "$HOME/.config/hypr/scripts/Volume.sh --dec",
+        "smooth-scrolling-threshold": 1,
+}
+
+}

@@ -1,0 +1,28 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Rofi Config for Google Search) */
+
+@import "~/.config/rofi/config.rasi"  
+
+/* ---- Window ---- */
+window {
+	width: 40%;
+	//orientation: horizontal;
+	height: inherit;
+    y-offset: -100px;
+    location: south;
+    children: [ "entry"];
+    border: 0px;
+    border-color: white/25%;
+}
+
+/* ---- Entry ---- */ 
+entry {
+	expand: true;
+	placeholder: "";
+	horizontal-align: 0.5;
+	padding: 15px;
+	border-radius: inherit;
+	background-color: #232323;
+	text-color: #aaaaaa;
+	font: "FiraCode Nerd Font Bold 12";
+}

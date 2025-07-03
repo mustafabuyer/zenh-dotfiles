@@ -1,0 +1,73 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+
+// ### DEFAULT Laptop  - Top ### //
+{
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  "$HOME/.config/waybar/UserModules",
+  ],
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 4,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 4,
+"margin-left": 4,
+"margin-right": 4,
+
+"modules-left": [
+	"group/notify",
+	"custom/separator#blank2",
+        "custom/separator#line",
+        "custom/separator#blank2",
+	"hyprland/workspaces#pacman",
+	"custom/playerctl2",
+	],
+
+"modules-center": [
+	"clock#6",
+	"custom/seperator#blank",
+	"custom/cava_mviz",
+	"custom/seperator#blank",
+	"clock#7",	
+	],
+
+
+//"custom/weather",
+//"custom/seperator#dot-line",
+//"idle_inhibitor",
+//"custom/hint",
+
+"modules-right": [
+	"tray", 
+	"custom/seperator#blank",
+	"custom/seperator#blank",
+	"custom/separator#line", 
+	"custom/seperator#blank",
+	"custom/seperator#blank", 
+	"group/audio",
+	"custom/seperator#blank",
+	"custom/seperator#blank",
+	"custom/separator#line",
+	"custom/seperator#blank",
+	"custom/seperator#blank",
+	"battery",
+	"custom/seperator#blank",
+	"custom/seperator#blank",
+	"custom/seperator#line",
+	"custom/seperator#blank",
+	"custom/seperator#blank",
+	"custom/lock",
+	"custom/reboot",
+	"custom/power",
+	],
+
+
+
+}
