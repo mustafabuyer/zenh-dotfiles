@@ -3,10 +3,10 @@
 
 @import '../../.config/waybar/wallust/colors-waybar.css';
 
-@define-color noti-border-color @color12;
-@define-color noti-bg rgba(0, 0, 0, 0.8);
-@define-color noti-bg-alt @background-alt;
-@define-color noti-bg-hover @background;
+@define-color noti-border-color transparent;
+@define-color noti-bg transparent;
+@define-color noti-bg-alt transparent;
+@define-color noti-bg-hover transparent;
 @define-color text-color @foreground;
 
 * {
@@ -17,8 +17,8 @@
 .control-center .notification-row:focus,
 .control-center .notification-row:hover {
     opacity: 1;
-    background: @noti-bg;
-    border-radius: 10px
+    background: transparent;
+    border-radius: 2px
 }
 
 .notification-row {
@@ -27,14 +27,14 @@
 }
 
 .notification {
-	border-radius: 10px;
+	border-radius: 0px;
 }
 
 .notification-content{
 	/*color: @text-color;*/
-    background: @noti-bg;
+    background: transparent;
     padding: 3px 10px 3px 6px;
-    border-radius: 10px;
+    border-radius: 2px;
     border: 1px solid @noti-border-color;
     margin: 0px;
 }
@@ -42,7 +42,7 @@
 .notification-default-action {
     margin: 0;
     padding: 0;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .close-button {
@@ -50,7 +50,7 @@
     color: @noti-bg;
     text-shadow: none;
     padding: 0;
-    border-radius: 10px;
+    border-radius: 0px;
     margin-top: 5px;
     margin-right: 5px;
 }
@@ -66,7 +66,7 @@
 .notification-action {
     border: 1px solid @noti-border-color;
     border-top: none;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 
@@ -89,12 +89,12 @@
 
 .notification-action:first-child {
     border-bottom-left-radius: 10px;
-    background: @noti-bg
+    background: transparent
 }
 
 .notification-action:last-child {
     border-bottom-right-radius: 10px;
-    background: @noti-bg-alt
+    background: transparent
 }
 
 .inline-reply {
@@ -130,7 +130,7 @@
 
 .body-image {
     margin-top: 6px;
-    color: @text-color;
+    color: transparent;
     border-radius: 10px
 }
 
@@ -179,12 +179,12 @@
 }
 
 .blank-window {
-    background: alpha(black, 0.1)
+    background: transparent
 }
 
 .widget-title {
     color: @text-color;
-    background: @noti-bg-alt;
+    background: transparent;
     padding: 3px 6px;
     margin: 5px;
     font-size: 1rem;
@@ -206,7 +206,7 @@
 }
 
 .widget-dnd {
-    background: @noti-bg-alt;
+    background: transparent;
     padding: 3px 6px;
     margin: 5px;
     border-radius: 10px;
@@ -303,8 +303,8 @@
 }
 
 .widget-volume {
-    background: @noti-bg-alt;
-    padding: 2px;
+    background: transparent;
+    padding: 20px;
     margin: 10px 10px 5px 10px;
     border-radius: 10px;
     font-size: x-large;
@@ -317,7 +317,7 @@
 }
 
 .per-app-volume {
-    background-color: @noti-bg;
+    background-color: transparent;
     padding: 4px 8px 8px;
     margin: 0 8px 8px;
     border-radius: 10px;
@@ -334,13 +334,15 @@
 }
 
 .low {
-  background: @text-color;
-  padding: 0px;
-  border-radius: 10px;
+  background: transparent;
+  padding: 10px;
+  margin-left: 150;
+  margin-right: 150;  
+  border-radius: 0px;
 }
 
 .normal {
-  background: @text-color;
+  background: transparent;
   padding: 0px;
   border-radius: 10px;
 }

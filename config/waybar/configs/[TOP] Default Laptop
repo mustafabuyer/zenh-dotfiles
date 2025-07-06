@@ -22,11 +22,8 @@
 "margin-right": 4,
 
 "modules-left": [
-	"group/notify",
-	"custom/separator#blank2",
-        "custom/separator#line",
         "custom/separator#blank2",
-	"hyprland/workspaces#pacman",
+	"hyprland/workspaces#roman",
 	"custom/playerctl2",
 	],
 

@@ -32,7 +32,7 @@ get_icon() {
 # Notify
 notify_user() {
     if [[ "$(get_volume)" == "Muted" ]]; then
-        notify-send -e -h string:x-canonical-private-synchronous:volume_notif -u low -i "         " "           $(get_icon)" "" ""
+        notify-send -e -h string:x-canonical-private-synchronous:volume_notif -u low -i "$(get_icon)" "" ""
     else
         notify-send -e -h int:value:"$(get_volume | sed 's/%//')" -h string:x-canonical-private-synchronous:volume_notif -u low -i "" "" "" &&
         "$sDIR/Sounds.sh" --volume
