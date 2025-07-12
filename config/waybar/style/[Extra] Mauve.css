@@ -1,111 +1,99 @@
-/* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
-/* .......Mauve....................... */
-/* --- 👍 designed by https://github.com/CelestiaKai  👍 --- */
+/* iPhone Notch Style Waybar - Original Modules Preserved */
 
 * {
 	font-family: "JetBrainsMono Nerd Font";
 	font-weight: bold;
-	min-height: 0;		
-	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-	font-size: 97%;
+	min-height: 0;
+	font-size: 12px;
 	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
+
 window#waybar {
-	background: #11111b;
-	color: #cba6f7;
+    background: rgba(17, 17, 17, 0.9);  /* 0.85 opaklık */
+    color: #444444;
+    padding-top: 0;
+    padding-bottom: 0;
 }
+
 
 window#waybar.hidden {
 	opacity: 0.5;
 }
 
-tooltip {
-	background: #1e1e2e;
-	border-radius: 10px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #11111b;
-	color: #cba6f7;
-}
-
-/*-----module groups----*/
-.modules-left,
-.modules-right {
-	border: 3px solid #11111b;
-	border-radius: 10px 10px 10px 10px;
-	background-color: #313244;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-right: 4px;
-	padding-left: 4px;
+/* Three separate sections like iPhone notch */
+.modules-left {
+	background: #111111;
+	border-radius: 0px 0px 2px 0px;
+	padding: 6px 0px 6px 0px;
+	margin-left: 0px;
+	margin-top: 0;
 }
 
 .modules-center {
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-right: 4px;
-	padding-left: 4px;
+	background: #111111;
+
+	border-radius: 0px 0px 2px 2px;
+	padding: 6px 8px 6px 8px;
+	margin-top: 0;
 }
 
-#taskbar button,
+.modules-right {
+	background: #111111;
+	border-radius: 0px 0px 0px 2px;
+	padding: 6px 0px 6px 12px;
+	margin-right: 0px;
+	margin-top: 0;
+	
+}
+
+/* Tooltips */
+tooltip {
+	background: rgba(0, 0, 0, 0.95);
+	border-radius: 15px;
+	border: 1px solid #666666;
+	color: #aaaaaa;
+}
+
+/* Workspaces */
 #workspaces button {
-	color: #6E6A86;
-    box-shadow: none;
-	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    padding-left: 4px;
-    padding-right: 4px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+	color: #888888;
+	padding: 0 4px;
+	margin: 0 1px;
+	border-radius: 2px;
+	background: transparent;
+	transition: all 0.0s ease;
+
 }
 
-#taskbar button.active,
 #workspaces button.active {
-	color: #1e1e1e;
-	border-radius: 30%;
-	background-color: #cba6f7;
-    padding-left: 6px;
-    padding-right: 8px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	color: #111111;
+	background: #888888;
+	padding: 0 1px;
 }
 
-#workspaces button.active:hover {
-	color: #1e1e1e;
-	border-radius: 30%;
-	background-color: #cba6f7;
-    padding-left: 6px;
-    padding-right: 8px;
-}
-
-#workspaces button.focused {
-	color: #d8dee9;
+#workspaces button:hover {
+	color: #111111;
+	background: #888888;
+	opacity: 0.8;
 }
 
 #workspaces button.urgent {
-	border-radius: 30%;
-	background-color: #cba6f7;
-	color: #1e1e1e;
+	background-color: #f38ba8;
+	color: #000000;
 }
 
-#taskbar button:hover,
-#workspaces button:hover {
-	color: #1e1e1e;
-	border: 3px solid #1e1e2e;
-	background-color: #cba6f7;
-    border-radius: 30%;
- 	padding-left: 4px;
-    padding-right: 4px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-}
-
+/* All modules */
 #backlight,
-#backlight-slider,
-#battery,
-#bluetooth,
+#battery {
+	color: #888888;
+	margin-right: 6px;
+	padding: 0 5px;
+}
+#bluetooth{
+	color: #888888;
+	background-color: #111111;
+}
 #clock,
 #cpu,
 #disk,
@@ -117,13 +105,11 @@ tooltip {
 #network,
 #power-profiles-daemon,
 #pulseaudio,
-#pulseaudio-slider,
 #taskbar,
 #temperature,
 #tray,
 #window,
 #wireplumber,
-#workspaces,
 #custom-backlight,
 #custom-browser,
 #custom-cava_mviz,
@@ -138,6 +124,9 @@ tooltip {
 #custom-hypridle,
 #custom-menu,
 #custom-playerctl,
+#custom-playerctl2 {
+	color: #666666;
+}
 #custom-power_vertical,
 #custom-power,
 #custom-quit,
@@ -148,49 +137,107 @@ tooltip {
 #custom-tty,
 #custom-updater,
 #custom-weather,
-#custom-weather.clearNight,
-#custom-weather.cloudyFoggyDay,
-#custom-weather.cloudyFoggyNight,
-#custom-weather.default, 
-#custom-weather.rainyDay,
-#custom-weather.rainyNight,
-#custom-weather.severe,
-#custom-weather.showyIcyDay,
-#custom-weather.snowyIcyNight,
-#custom-weather.sunnyDay {
-	color: whitesmoke;
-	padding-top: 4px;
-	padding-bottom: 4px;
-	padding-right: 6px;
-	padding-left: 6px;
+#custom-separator,
+#custom-seperator {
+	color: #666666;
+	padding: 0 6px;
+}
+
+/* Separators */
+#custom-separator,
+#custom-seperator {
+	color: #333333;
+	padding: 0 3px;
+	font-size: 8px;
+}
+
+#custom-separator.line {
+	color: #333333;
+}
+
+#custom-seperator.blank,
+#custom-separator.blank2 {
+	color: transparent;
+	padding: 0 12px;
+	margin-left: 10px;
+}
+/* Special module styles */
+#battery.critical:not(.charging) {
+	color: #ffffff;
+	animation: blink 2s steps(12) infinite;
+}
+
+#custom-lock {
+	padding: 0 12px;
+	color: #888888;
+}
+
+#custom-reboot {
+	color: #888888;
+}
+
+#custom-power {
+	color: #888888;
+}
+
+#custom-cava_mviz {
+	color: #bababa;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+/* Tray icon renk filtresi */
+#tray * {
+    color: #888888;  /* Mor renk */
+    -gtk-icon-style: symbolic;
+}
+
+
+
+#tray {
+	padding: 0 5px;
+	color: #888888;
 
 }
 
-#temperature.critical {
-	background-color: #ff0000;
+#tray > .passive {
+	
+	color: #888888;
 }
 
+#tray > .needs-attention {
+	
+	color: #888888;
+}
+
+/* Clock styles */
+#clock {
+	color: #999999;
+	font-weight: bold;
+}
+
+/* Audio group */
+group {
+	padding: 0;
+	margin: 0;
+}
+
+/* Animations */
 @keyframes blink {
 	to {
 		color: #000000;
+		background-color: #666666;
 	}
 }
 
-/*-----Indicators----*/
+/* Indicators */
 #custom-hypridle.notactive,
 #idle_inhibitor.activated {
 	color: #39FF14;
 }
 
-#battery.critical:not(.charging) {
-	color: #f53c3c;
-	animation-name: blink;
-	animation-duration: 3.0s;
-	animation-timing-function: steps(12);
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-}
-
+/* Sliders if you have them */
 #backlight-slider slider,
 #pulseaudio-slider slider {
 	min-width: 0px;
@@ -213,5 +260,5 @@ tooltip {
 #pulseaudio-slider highlight {
 	min-height: 10px;
 	border-radius: 5px;
-	background-color: purple;
+	background-color: #cba6f7;
 }

@@ -2,7 +2,7 @@
 
 echo "[`date`] Yeni terminal oturumu" >> ~/sprite_anim_debug.log
 
-gifdir="$HOME/sprite_gifs_fixed"
+gifdir="$HOME/Desktop/ProjectZenh/katana-zero-terminal/sprite_gifs_fixed"
 
 gif=$(find "$gifdir" -type f -iname "*.gif" | shuf -n 1)
 

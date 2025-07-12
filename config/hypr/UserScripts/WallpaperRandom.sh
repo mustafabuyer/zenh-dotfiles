@@ -2,7 +2,7 @@
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Script for Random Wallpaper ( CTRL ALT W)
 
-wallDIR="$HOME/Pictures/wallpapers"
+wallDIR="$HOME/Desktop/ProjectZenh/zenh-wallpapers"
 SCRIPTSDIR="$HOME/.config/hypr/scripts"
 
 focused_monitor=$(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name')
@@ -12,7 +12,7 @@ RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
 
 
 # Transition config
-FPS=30
+FPS=60
 TYPE="random"
 DURATION=1
 BEZIER=".43,1.19,1,.4"
@@ -26,5 +26,5 @@ wait $!
 
 wait $!
 sleep 2
-"$SCRIPTSDIR/Refresh.sh"
+#"$SCRIPTSDIR/Refresh.sh"
 

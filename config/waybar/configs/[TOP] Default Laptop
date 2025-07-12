@@ -1,5 +1,3 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-
 // ### DEFAULT Laptop  - Top ### //
 {
 "include": [
@@ -10,61 +8,52 @@
   "$HOME/.config/waybar/UserModules",
   ],
 "layer": "top",
-//"mode": "dock",
 "exclusive": true,
 "passthrough": false,
 "position": "top",
-"spacing": 4,
+"spacing": 0,
 "fixed-center": true,
 "ipc": true,
-"margin-top": 4,
-"margin-left": 4,
-"margin-right": 4,
+"margin-top": 0,
+"margin-left": 0,
+"margin-right": 0,
 
 "modules-left": [
-        "custom/separator#blank2",
-	"hyprland/workspaces#roman",
-	"custom/playerctl2",
-	],
+    "custom/separator#blank2",
+    "hyprland/workspaces#roman",
+    "custom/playerctl2",
+    ],
 
 "modules-center": [
-	"clock#6",
-	"custom/seperator#blank",
-	"custom/cava_mviz",
-	"custom/seperator#blank",
-	"clock#7",	
-	],
-
-
+    "clock#6",
+    "custom/seperator#blank",
+    "custom/seperator#blank",
+    "custom/cava_mviz",
+    "custom/seperator#blank",
+    "clock#7",    
+    ],
 //"custom/weather",
 //"custom/seperator#dot-line",
 //"idle_inhibitor",
 //"custom/hint",
-
 "modules-right": [
-	"tray", 
-	"custom/seperator#blank",
-	"custom/seperator#blank",
-	"custom/separator#line", 
-	"custom/seperator#blank",
-	"custom/seperator#blank", 
-	"group/audio",
-	"custom/seperator#blank",
-	"custom/seperator#blank",
-	"custom/separator#line",
-	"custom/seperator#blank",
-	"custom/seperator#blank",
-	"battery",
-	"custom/seperator#blank",
-	"custom/seperator#blank",
-	"custom/seperator#line",
-	"custom/seperator#blank",
-	"custom/seperator#blank",
-	"custom/lock",
-	"custom/reboot",
-	"custom/power",
-	],
-
-
-
+    "custom/seperator#blank",
+    "custom/seperator#blank", 
+    "custom/seperator#blank",
+    "custom/seperator#blank", 
+    "group/audio",
+    "custom/seperator#blank",
+    "custom/seperator#blank",
+    "custom/separator#line",
+    "custom/seperator#blank",
+    "custom/seperator#blank",
+    "battery",
+    "custom/seperator#blank",
+    "custom/seperator#blank",
+    "custom/seperator#line",
+    "custom/seperator#blank",
+    "custom/seperator#blank",
+    "custom/power",
+    ],
 }
+

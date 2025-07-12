@@ -17,7 +17,7 @@ iDIRi="$HOME/.config/swaync/icons"
 # swww transition config
 FPS=60
 TYPE="wipe"
-DURATION=2
+DURATION=1
 BEZIER=".43,1.19,1,.4"
 SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION --transition-bezier $BEZIER"
 
@@ -50,8 +50,8 @@ no-effects() {
     wallust run "$wallpaper_current" -s &&
     wait $!
     # Refresh rofi, waybar, wallust palettes
-	sleep 2
-	"$SCRIPTSDIR/Refresh.sh"
+	# sleep 2
+    # "$SCRIPTSDIR/Refresh.sh"
 
     notify-send -u low -i "$iDIR/ja.png" "No wallpaper" "effects applied"
     # copying wallpaper for rofi menu
@@ -90,7 +90,7 @@ main() {
             wallust run "$wallpaper_output" -s &
             sleep 1
             # Refresh rofi, waybar, wallust palettes
-            "${SCRIPTSDIR}/Refresh.sh"
+            #"${SCRIPTSDIR}/Refresh.sh"
             notify-send -u low -i "$iDIR/ja.png" "$choice" "effects applied"
         else
             echo "Effect '$choice' not recognized."
@@ -100,7 +100,7 @@ main() {
 
 # Check if rofi is already running and kill it
 if pidof rofi > /dev/null; then
-    pkill rofi
+   # pkill rofi
 fi
 
 main

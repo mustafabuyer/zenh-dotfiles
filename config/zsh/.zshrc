@@ -91,6 +91,24 @@ fi
 
 
 
+# Katana ZERO terminal animation
+if [[ $- == *i* ]] && [ -z "$TMUX" ] && [ -z "$VIM" ]; then
+    # Define the gif directory
+    katana_gif_dir="/home/eren/Desktop/ProjectZenh/katana-zero-terminal/katana-sprites"
+    
+    # Find all gif files
+    gif_files=($(find "$katana_gif_dir" -name "*.gif" 2>/dev/null))
+    
+    # Show random gif if any found
+    if [ ${#gif_files[@]} -gt 0 ]; then
+        random_gif="${gif_files[RANDOM % ${#gif_files[@]}]}"
+        kitty +kitten icat --align left "$random_gif" 2>/dev/null
+    fi
+fi
+
+
+
+
 
 function ayet_kutu_ustalt() {
   local ayet=$(grep -vE '^[+-] ' ~/Desktop/ProjectZenh/rand-quote-terminal/random_quotes.txt | shuf -n 1)
