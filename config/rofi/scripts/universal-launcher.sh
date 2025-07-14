@@ -30,12 +30,11 @@ main() {
         INPUT="$1"
     else
         # Argüman yoksa rofi dmenu ile input al
-        INPUT=$(echo "" | rofi -dmenu -p "" -theme ~/.config/rofi/themes/$THEME.rasi \
-                -mesg '. → shortcuts | .p power | .w wifi | .e emoji | .s system | Type for apps')
+        INPUT=$(echo "" | rofi -dmenu -p "" -theme ~/.config/rofi/themes/$THEME.rasi)
         
         # Boş input'ta app launcher aç
         if [ -z "$INPUT" ]; then
-            rofi -show drun -theme ~/.config/rofi/themes/$THEME.rasi
+            rofi -show drun -display-drun "" -theme ~/.config/rofi/themes/$THEME.rasi
             exit 0
         fi
     fi
@@ -189,14 +188,14 @@ main() {
                 calculate "$INPUT"
             else
                 # Sayı içeriyor ama app adı da olabilir
-                rofi -show drun -filter "$INPUT" -theme ~/.config/rofi/themes/$THEME.rasi
+                rofi -show drun -display-drun "" -filter "$INPUT" -theme ~/.config/rofi/themes/$THEME.rasi
             fi
             ;;
             
         # Default - app search
         *)
             # App launcher'ı search modunda aç
-            rofi -show drun -filter "$INPUT" -theme ~/.config/rofi/themes/$THEME.rasi
+            rofi -show drun -display-drun "" -filter "$INPUT" -theme ~/.config/rofi/themes/$THEME.rasi
             ;;
     esac
 }

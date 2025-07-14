@@ -1,0 +1,49 @@
+* {
+    background-color: #CC212121;
+    text-color: #FFFFFF;
+    
+    normal-background: transparent;
+    normal-foreground: #FFFFFF;
+    selected-normal-background: #606060;
+    selected-normal-foreground: #FFFFFF;
+    
+    active-background: transparent;
+    active-foreground: #FFFFFF;
+    selected-active-background: #606060;
+    selected-active-foreground: #FFFFFF;
+    
+    urgent-background: transparent;
+    urgent-foreground: #FF5555;
+    selected-urgent-background: #FF5555;
+    selected-urgent-foreground: #FFFFFF;
+}
+
+window {
+    background-color: #CC212121;
+    width: 480px;
+}
+
+mainbox {
+    background-color: transparent;
+}
+
+inputbar {
+    background-color: #404040;
+    text-color: #FFFFFF;
+    padding: 8px;
+}
+
+listview {
+    background-color: transparent;
+}
+
+element {
+    background-color: transparent;
+    text-color: #FFFFFF;
+    padding: 8px;
+}
+
+element selected {
+    background-color: #606060;
+    text-color: #FFFFFF;
+}

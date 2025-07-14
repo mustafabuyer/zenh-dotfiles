@@ -1,57 +1,71 @@
-/* ROFI SQUARED THEME USING THE MATERIAL DARKER PALETTE  */
-/* Author: Newman Sanchez (https://github.com/newmanls) */
-
 * {
     font:   "FiraCode Nerd Font Medium 12";
-
-    bg0:     #212121;
-    bg1:     #232323;
-    fg0:     #eeffff;
-
-    accent-color:     #f07178;
-    urgent-color:     #ffcb6b;
-
-    background-color:   transparent;
-    text-color:         @fg0;
-
+    
+    /* Ana renkler - RGBA formatında şeffaflık ile */
+    bg-dark:    rgba(33, 33, 33, 0.9);    /* %90 opak koyu gri */
+    bg-light:   rgba(85, 85, 85, 0.9);  /* %90 opak açık gri */
+    
+    /* Normal durum renkleri */
+    normal-background:          transparent;
+    normal-foreground:          transparent;
+    
+    /* Seçili durum renkleri */
+    selected-normal-background: transparent;
+    selected-normal-foreground: transparent;
+    
+    /* Genel ayarlar */
+    background-color: rgba(0, 0, 0, 0);
     margin:     0;
     padding:    0;
     spacing:    0;
 }
 
 window {
+    transparency: "real";
     location:   center;
     width:      480;
+    background-color:   rgba(33, 33, 33, 0.9);  /* DİREKT RGBA DEĞER */
+}
 
-    background-color:   transparent;
+mainbox {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 inputbar {
     spacing:    8px;
     padding:    8px;
-
-    background-color:   @bg1;
+    background-color:   rgba(85, 85, 85, 1);  /* DİREKT RGBA */
+    text-color:         rgba(33, 33, 33, 1);
 }
 
-prompt, entry, element-icon, element-text {
+prompt, entry {
+    vertical-align: 0.5;
+    text-color:     rgba(33, 33, 33, 1);
+}
+
+element-icon {
+    size:           0.8em;
     vertical-align: 0.5;
 }
 
-prompt {
-    text-color: transparent;
+element-text {
+    vertical-align: 0.5;
+    background-color: inherit;
+    text-color:       inherit;
 }
 
 textbox {
-    padding:            8px;
-    background-color:   @bg1;
+    padding:            0px;
+    background-color:   rgba(85, 85, 85, 0.9);  /* DİREKT RGBA */
+    text-color:         @bg-dark;
 }
 
 listview {
     padding:    0px 0;
     lines:      8;
     columns:    1;
-
     fixed-height:   false;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 element {
@@ -59,38 +73,12 @@ element {
     spacing:    8px;
 }
 
-element normal normal {
-    text-color: #cdcdcd;
-}
-
-element normal urgent {
-    text-color: #a81414;
-}
-
-element normal active {
-    text-color: #ffffff;
-}
-
-element alternate active {
-    text-color: @bg0;
+element normal {
+    background-color: rgba(33, 33, 33, 0);  /* Transparan */
+    text-color:       @bg-light;
 }
 
 element selected {
-    text-color: #ffffff;
-}
-
-element selected normal, element selected active {
-    background-color:   @bg1;
-}
-
-element selected urgent {
-    background-color:   @urgent-color;
-}
-
-element-icon {
-    size:   0.8em;
-}
-
-element-text {
-    text-color: #bbbbbb;
+    background-color: rgba(85, 85, 85, 1);  /* DİREKT RGBA */
+    text-color:       @bg-dark;
 }
